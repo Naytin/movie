@@ -1,0 +1,36 @@
+@mixin flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+@mixin flex-center{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin grid {
+	display: -moz-grid;
+	display: -ms-grid;
+	display: -o-grid;
+	display: grid;
+}
+
+
+@mixin mask($color) {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 0;
+	background-color: $color;
+}
