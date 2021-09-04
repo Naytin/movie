@@ -1,33 +1,32 @@
 import React from 'react';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import Nav from "../Nav/Nav";
-import Movie from "../pages/Movie/Movie";
-import Home from "../pages/Home/Home";
-import Login from "../pages/Login/Login";
-
+import {Home, Movie, Actors,Login} from '../pages'
+import {HeadPanel, Header} from '../common'
 
 export const PATH = {
     HOME: "/",
     MOVIE: "/movie",
+    ACTORS: "/actors",
     LOGIN: "/login",
 }
 
 function App() {
+
     return (
         <BrowserRouter>
             <div>
-                <h1 className='logo'>HOME<span className=''>cinema</span></h1>
-                <Nav/>
-
-
-                <Switch>
-                    <Route path={PATH.HOME} render={() => <Home/>}/>
-                    <Route exact path={PATH.MOVIE} render={() => <Movie/>}/>
-                    <Route exact path={PATH.LOGIN} render={() => <Login/>}/>
-                    <Route path={'/404'} render={() => <h1>404: PAGE NOT FOUND</h1>}/>
-                    <Redirect from={'*'} to={'/404'}/>
-                </Switch>
-
+                <HeadPanel/>
+                <Header/>
+                <main>
+                    <Switch>
+                        <Route exact path={PATH.HOME} render={() => <Home/>}/>
+                        <Route exact path={PATH.MOVIE} render={() => <Movie/>}/>
+                        <Route exact path={PATH.ACTORS} render={() => <Actors/>}/>
+                        <Route exact path={PATH.LOGIN} render={() => <Login/>}/>
+                        <Route path={'/404'} render={() => <h1>404: PAGE NOT FOUND</h1>}/>
+                        <Redirect from={'*'} to={'/404'}/>
+                    </Switch>
+                </main>
             </div>
         </BrowserRouter>
     );

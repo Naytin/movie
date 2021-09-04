@@ -33,14 +33,6 @@ body {
   color: $secondary;
 }
 
-.logo {
-  font-family: 'Patua One', cursive;
-  span {
-    color: $light;
-  }
-}
-
-
 img {
   max-width: 100%;
   display: block;
@@ -55,6 +47,11 @@ select,button{
   border: none;
   cursor: pointer;
   background-color: transparent;
+  color: inherit;
+}
+
+li {
+  list-style: none;
 }
 
 a{

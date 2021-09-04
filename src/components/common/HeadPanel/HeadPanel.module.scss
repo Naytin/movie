@@ -1,0 +1,64 @@
+@import "../../../scss/vars";
+@import "../../../scss/media";
+
+
+.head__panel {
+  z-index: 20;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: fade-out($default, 0.8);
+  .logo {
+    width: 25%;
+    font-size: 2rem;
+    font-family: 'Patua One', cursive;
+
+    //@Media
+    @include media('<768px'){
+      font-size: 1.5rem;
+  }
+    span {
+      color: $light;
+  }
+
+    //@Media
+    @include media('<768px'){
+      width: 50%;
+      text-align: center;
+  }
+}
+
+  .wrapper {
+    //@Media
+    @include media('>768px'){
+      width: 25%;
+      text-align: right;
+  }
+}
+
+  .user {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: fade-out($secondary, 0.1);
+  }
+}
+
+  .menu {
+    display: none;
+    height: 2rem;
+    width: 2rem;
+    color: $light;
+    &.open {
+      transform: rotate(180deg);
+  }
+    //@Media
+    @include media('<768px'){
+      display: block;
+  }
+}
+}
+
