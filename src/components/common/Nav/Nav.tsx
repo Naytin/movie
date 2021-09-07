@@ -20,7 +20,7 @@ const Nav: React.FC<PropsType> = ({handler, open}) => {
         <LinkItem key={i} onClickHandler={handler}  link={e.link} text={e.text}/>)
 
     return (
-        <nav className={`${styles.list} ${open && styles.open}`}>
+        <nav className={`${styles.list} ${open ? styles.open : ''}`}>
             <ul>
                 {links}
             </ul>
@@ -29,6 +29,8 @@ const Nav: React.FC<PropsType> = ({handler, open}) => {
 };
 
 export default Nav;
+
+
 
 
 type LinkItemType = {

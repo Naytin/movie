@@ -34,6 +34,8 @@ body {
 }
 
 img {
+  z-index: 100;
+  object-fit: contain;
   max-width: 100%;
   display: block;
 }
@@ -63,5 +65,19 @@ a{
 a:hover{
   text-decoration: none;
 }
+
+.slick-dots {
+  position: absolute;
+  bottom: 1rem;
+  li {
+    button {
+      &:before {
+        color: $secondary;
+        opacity: 0.5;
+        font-size: 0.6rem;
+      }
+    }
+  }
+ }
 
 

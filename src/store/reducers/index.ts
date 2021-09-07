@@ -1,5 +1,6 @@
-import {getMovies} from "./movieReducer";
+import {getMovies,getTrailer} from "./movieReducer";
 
-export default  {
+export default {
     getMovies,
+    getTrailer
 }

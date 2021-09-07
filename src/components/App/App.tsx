@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import {Home, Movie, Actors,Login} from '../pages'
-import {HeadPanel, Header} from '../common'
+import {HeadPanel} from '../common'
 
 export const PATH = {
     HOME: "/",
@@ -16,7 +16,7 @@ function App() {
         <BrowserRouter>
             <div>
                 <HeadPanel/>
-                <Header/>
+
                 <main>
                     <Switch>
                         <Route exact path={PATH.HOME} render={() => <Home/>}/>

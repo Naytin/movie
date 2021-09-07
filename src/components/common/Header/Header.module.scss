@@ -1,0 +1,86 @@
+@import '../../../scss/vars';
+@import '../../../scss/media';
+
+.wrapper {
+  position: relative;
+  height: calc(100% - 48px);
+  overflow: hidden;
+  .poster__wrapper {
+    position: relative;
+    height: calc(100% - 48px);
+  }
+  .title__wrapper {
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
+    width: 60%;
+    h3 {
+      font-size: 3rem;
+      color: $light;
+
+      overflow: hidden;
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+      @include media('<992px') {
+        font-size: 2rem;
+      }
+      @include media('<600px') {
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+    @include media('<600px') {
+      bottom: 1rem;
+    }
+  }
+}
+
+.playing {
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute;
+  top: calc(50% - 32px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: fade-out($secondary,0.6);
+  transition: 0.5s;
+
+  &.is {
+    @extend .playing;
+
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.3;
+    z-index: 1000;
+  }
+
+  &:hover {
+    transition: 0.5s;
+    color: fade-out($secondary,0.6);
+  }
+
+  //@media
+  @include media('<600px') {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mask {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

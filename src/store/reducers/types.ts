@@ -5,5 +5,6 @@ export type MoviesDataType = {
     results: Array<MoviesType>
     total_pages: number
     total_results: number
+    trailers?: Array<string> | null
 }
 

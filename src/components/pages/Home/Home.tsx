@@ -1,10 +1,11 @@
 import React from 'react';
+import {Header} from "../../common";
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+        <>
+            <Header/>
+        </>
     );
 };
 

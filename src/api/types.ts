@@ -6,6 +6,7 @@ export type MoviesType = {
     media_type: string
     original_language: string
     original_title: string
+    original_name: string
     overview: string
     popularity: number
     poster_path: string
@@ -21,4 +22,22 @@ export type ResponseType<D = MoviesType> = {
     results: Array<D>
     total_pages: number
     total_results: number
+}
+
+export type TrailerType = {
+    id: string
+    iso_639_1: string
+    iso_3166_1: string
+    key: string
+    name: string
+    official: boolean
+    published_at: string
+    site: string
+    size: number
+    type: string
+}
+
+export type TrailersType = {
+    id: number
+    results: TrailerType[]
 }
